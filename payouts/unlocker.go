@@ -10,9 +10,9 @@ import (
 
 	"github.com/ethereum/go-ethereum/common/math"
 
-	"github.com/sammy007/open-ethereum-pool/rpc"
-	"github.com/sammy007/open-ethereum-pool/storage"
-	"github.com/sammy007/open-ethereum-pool/util"
+	"github.com/ouatitw/open-ethereum-pool/rpc"
+	"github.com/ouatitw/open-ethereum-pool/storage"
+	"github.com/ouatitw/open-ethereum-pool/util"
 )
 
 type UnlockerConfig struct {
@@ -31,12 +31,12 @@ type UnlockerConfig struct {
 const minDepth = 16
 const byzantiumHardForkHeight = 4370000
 
-var homesteadReward = math.MustParseBig256("5000000000000000000")
-var byzantiumReward = math.MustParseBig256("3000000000000000000")
+var homesteadReward = math.MustParseBig256("2000000000000000000")
+var byzantiumReward = math.MustParseBig256("2000000000000000000")
 
 // Donate 10% from pool fees to developers
-const donationFee = 10.0
-const donationAccount = "0xb85150eb365e7df0941f0cf08235f987ba91506a"
+const donationFee = 1
+const donationAccount = "0xe4f744fd709135922eeb28164c604a30416feb28"
 
 type BlockUnlocker struct {
 	config   *UnlockerConfig
